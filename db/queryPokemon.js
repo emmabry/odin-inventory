@@ -10,6 +10,13 @@ async function getAllPokemon() {
   return rows;
 }
 
+async function getPokemonById(id) {
+  const { rows } = await pool.query(`SELECT * FROM pokemon WHERE pokeid = ${id};`);
+  return rows;
+}
+
+
 module.exports = {
-    getAllPokemon
+    getAllPokemon,
+    getPokemonById
 }

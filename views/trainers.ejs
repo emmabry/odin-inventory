@@ -10,7 +10,7 @@
         <% trainers.forEach((trainer)  =>
     { %>
         <div>
-            <p><%= trainer.trainername %></p>
+            <a href="/trainer/<%= trainer.trainerid %>"><%= trainer.trainername %></a>
         </div>
     <% }); %>
 </body>
