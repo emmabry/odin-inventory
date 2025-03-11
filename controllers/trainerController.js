@@ -1,5 +1,4 @@
 const db = require("../db/queryTrainer");
-const pokedb = require("../db/queryPokemon");
 
 async function trainerGet(req, res) {
     const trainers = await db.getAllTrainers();
@@ -22,7 +21,8 @@ async function trainerPokemonGet(req, res) {
         pokemon: pokemon
     })
   }
-  module.exports = {
+
+module.exports = {
     trainerGet,
     trainerPokemonGet
   };

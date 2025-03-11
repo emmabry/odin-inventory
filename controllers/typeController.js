@@ -9,6 +9,21 @@ async function typeGet(req, res) {
     })
   }
 
-  module.exports = {
-    typeGet
+async function typePokemonGet(req, res) {
+    const typeid = req.params.typeid
+    const type = await db.getTypeById(typeid)
+    const pokemon = await db.getPokemonByType(typeid)
+    console.log("Type:", type)
+    console.log("Types pokemon: ", pokemon);
+    res.render("type_poke", {
+        title: type.typename,
+        type: type,
+        pokemon: pokemon
+    })
+
+}
+
+module.exports = {
+    typeGet,
+    typePokemonGet
   };

@@ -10,7 +10,7 @@
         <% types.forEach((type)  =>
     { %>
         <div>
-            <p><%= type.typename %></p>
+            <a href="/type/<%= type.typeid %>"><%= type.typename %></a>
         </div>
     <% }); %>
 </body>

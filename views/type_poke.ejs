@@ -7,13 +7,12 @@
 </head>
 <body>
     <div>
-        <p><%= trainer[0].trainername %>'s Pokemon</p>
+        <p><%= type[0].typename %>'s Pokemon</p>
     </div>
     <% pokemon.forEach((poke)  =>
 { %>
     <div>
         <p>Name: <%= poke.name %></p>
-        <p>Type: <%= poke.types %></p>
         <img src="<%= poke.img_url %>" alt="<%= poke.name %>">
     </div>
 <% }); %>
